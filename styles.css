@@ -1,0 +1,74 @@
+/* Estilo geral */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Tema no topo */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Layout principal */
+.container {
+    display: flex;
+    margin-top: 70px; /* Espaço para compensar o header fixo */
+    flex-grow: 1;
+}
+
+/* Menu lateral */
+.sidebar {
+    width: 200px;
+    background-color: #f4f4f4;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+    transition: transform 0.3s ease;
+    padding-top: 20px; /* Ajuste para evitar sobreposição com o header */
+}
+
+.sidebar.hidden {
+    transform: translateX(-200px);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 15px 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar li:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+/* Conteúdo principal */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* Botão de menu */
+.menu-toggle {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1000;
+}

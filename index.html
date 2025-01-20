@@ -3,9 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome</h1>
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
+
+    <button class="menu-toggle">☰</button>
+
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li onclick="showContent('home')">Home</li>
+                <li onclick="showContent('about')">About</li>
+                <li onclick="showContent('projects')">Projects</li>
+                <li onclick="showContent('contact')">Contact</li>
+            </ul>
+        </nav>
+        <div class="content" id="content">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Click on the menu items to view more content.</p>
+        </div>
+    </div>
+
+    <script>
+        const sidebar = document.querySelector('.sidebar');
+        const menuToggle = document.querySelector('.menu-toggle');
+        const content = document.getElementById('content');
+
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('hidden');
+        });
+
+        function showContent(section) {
+            let contentHtml = '';
+            if (section === 'home') {
+                contentHtml = '<h2>Home</h2><p>Welcome to the home section.</p>';
+            } else if (section === 'about') {
+                contentHtml = '<h2>About</h2><p>This is the about section where you describe yourself.</p>';
+            } else if (section === 'projects') {
+                contentHtml = '<h2>Projects</h2><p>Here are some of your amazing projects.</p>';
+            } else if (section === 'contact') {
+                contentHtml = '<h2>Contact</h2><p>Reach out to me via email or social media.</p>';
+            }
+            content.innerHTML = contentHtml;
+        }
+    </script>
 </body>
 </html>
