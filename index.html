@@ -16,10 +16,10 @@
     <div class="container">
         <nav class="sidebar">
             <ul>
-                <li onclick="showContent('home')">Home</li>
-                <li onclick="showContent('about')">About</li>
-                <li onclick="showContent('projects')">Projects</li>
-                <li onclick="showContent('contact')">Contact</li>
+                <li onclick="loadPage('pages/home.html')">Home</li>
+                <li onclick="loadPage('pages/about.html')">About</li>
+                <li onclick="loadPage('pages/projects.html')">Projects</li>
+                <li onclick="loadPage('pages/contact.html')">Contact</li>
             </ul>
         </nav>
         <div class="content" id="content">
@@ -28,28 +28,6 @@
         </div>
     </div>
 
-    <script>
-        const sidebar = document.querySelector('.sidebar');
-        const menuToggle = document.querySelector('.menu-toggle');
-        const content = document.getElementById('content');
-
-        menuToggle.addEventListener('click', () => {
-            sidebar.classList.toggle('hidden');
-        });
-
-        function showContent(section) {
-            let contentHtml = '';
-            if (section === 'home') {
-                contentHtml = '<h2>Home</h2><p>Welcome to the home section.</p>';
-            } else if (section === 'about') {
-                contentHtml = '<h2>About</h2><p>This is the about section where you describe yourself.</p>';
-            } else if (section === 'projects') {
-                contentHtml = '<h2>Projects</h2><p>Here are some of your amazing projects.</p>';
-            } else if (section === 'contact') {
-                contentHtml = '<h2>Contact</h2><p>Reach out to me via email or social media.</p>';
-            }
-            content.innerHTML = contentHtml;
-        }
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
