@@ -23,3 +23,10 @@ function loadPage(pageUrl) {
             content.innerHTML = `<p>Error loading content: ${error.message}</p>`;
         });
 }
+// Função para exibir o PDF no conteúdo principal
+function showPDF(pdfUrl) {
+    const pdfViewer = `
+        <iframe src="${pdfUrl}" style="width: 100%; height: 100%; border: none;"></iframe>
+    `;
+    content.innerHTML = pdfViewer;
+}

@@ -34,7 +34,9 @@ header {
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     overflow: auto;
     transition: transform 0.3s ease;
-    padding-top: 20px; /* Ajuste para evitar sobreposição com o header */
+    padding-top: 20px;
+    height: 100vh; /* Define a altura fixa como 100% da altura da janela */
+    position: fixed; /* Fixa o menu lateral para não ser afetado pelo conteúdo */
 }
 
 .sidebar.hidden {
@@ -59,7 +61,9 @@ header {
 /* Conteúdo principal */
 .content {
     flex-grow: 1;
-    padding: 20px;
+    padding: 0; /* Remove padding para que o PDF ocupe toda a área */
+    margin-left: 200px;
+    height: calc(100vh - 70px); /* Garante que a altura ocupe o espaço abaixo do header */
 }
 
 /* Botão de menu */
