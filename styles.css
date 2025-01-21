@@ -1,4 +1,4 @@
-/* Estilo geral */
+/* General style for the body element */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -9,88 +9,107 @@ body {
     color: #ffffff; /* Branco para o texto */
 }
 
-/* Tema no topo */
+/* Top header style */
 header {
-    background-color: #40648f; /* Azul mais escuro para o cabeçalho */
-    color: rgb(169, 164, 195);
-    padding: 17px 17px;
-    text-align: left;
+    background-color: #0d023b;
+    color: white;
+     padding: 13px 13px;
+    text-align: left; /* Alinha o texto à esquerda */
     position: fixed;
     top: 0;
     width: 100%;
+    
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: center; /* Centraliza verticalmente o conteúdo do header */
+    justify-content: space-between; /* Garante espaço entre o título e outros itens */
     box-sizing: border-box;
 }
 
+/* Header title style */
 header h1 {
-    margin: 0;
-    font-size: 20px;
-    padding-left: 60px;
+    margin: 0; /* Remove margens extras no título */
+    font-size: 20px; /* Ajuste opcional do tamanho do título */
+    padding-left: 60px; /* Garante espaçamento entre o botão e o título */
 }
 
-/* Botão de menu */
+/* Menu toggle button style */
 .menu-toggle {
     position: fixed;
-    left: 20px;
-    top: 10px;
-    background-color: #255183; /* Azul médio para contraste */
-    color: rgb(163, 152, 218);
+    left: 20px; /* Ajusta a posição do botão */
+    top: 15px; /* Ajusta a altura para não sobrepor o título */
+    background-color: #4CAF50;
+    color: white;
     border: none;
     padding: 10px 15px;
     cursor: pointer;
     z-index: 1000;
 }
 
-/* Layout principal */
+/* Main layout container */
 .container {
     display: flex;
-    margin-top: 70px;
+    margin-top: 70px; /* Espaço para compensar o header fixo */
     flex-grow: 1;
 }
 
-/* Menu lateral */
+/* Sidebar (menu) style */
 .sidebar {
     width: 200px;
-    background-color: #002b5c; /* Azul escuro para a barra lateral */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    background-color: #f4f4f4;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     overflow: auto;
     transition: transform 0.3s ease;
     padding-top: 20px;
-    height: 100vh;
-    position: fixed;
+    height: 100vh; /* Define a altura fixa como 100% da altura da janela */
+    position: fixed; /* Fixa o menu lateral para não ser afetado pelo conteúdo */
 }
 
 .sidebar.hidden {
-    transform: translateX(-200px);
+    transform           : translateX(-200px); /* Moves the sidebar off-screen                           */
 }
 
+/* Sidebar list style */
 .sidebar ul {
-    list-style: none;
-    padding: 0;
+    list-style          : none              ; /* Removes default list bullets                           */
+    padding             : 0                 ; /* Removes default padding                                */
 }
 
+/* Sidebar list item style */
 .sidebar li {
     padding: 15px 10px;
-    border-bottom: 1px solid #004080;
+    border-bottom: 1px solid #ddd;
     color: rgb(156, 146, 212);
 }
 
+/* Hover effect for sidebar list items */
 .sidebar li:hover {
-    background-color: #004080; /* Azul mais claro para o hover */
+    background-color: #ddd;
     cursor: pointer;
 }
 
-/* Conteúdo principal */
+/* Main content style */
 .content {
     flex-grow: 1;
     padding: 20px;
-    margin-left: 220px;
-    transition: margin-left 0.3s ease;
+    margin-left: 220px; /* Espaço quando o menu está visível */
+    transition: margin-left 0.3s ease; /* Animação suave ao recolher/expandir o menu */
     box-sizing: border-box;
     background-color: #001f3f; /* Fundo do conteúdo */
     color: #a8a6b1;
+}
+
+
+/* Botão de menu */
+.menu-toggle {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    background-color: #0d023b;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1000;
 }
 /* Estilo para links padrão */
 a {
