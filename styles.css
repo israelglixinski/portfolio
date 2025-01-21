@@ -5,37 +5,38 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    background-color: #001f3f; /* Azul escuro para o fundo */
+    color: #ffffff; /* Branco para o texto */
 }
 
 /* Tema no topo */
 header {
-    background-color: #0d023b;
-    color: white;
-     padding: 13px 13px;
-    text-align: left; /* Alinha o texto à esquerda */
+    background-color: #40648f; /* Azul mais escuro para o cabeçalho */
+    color: rgb(169, 164, 195);
+    padding: 17px 17px;
+    text-align: left;
     position: fixed;
     top: 0;
     width: 100%;
-    
     display: flex;
-    align-items: center; /* Centraliza verticalmente o conteúdo do header */
-    justify-content: space-between; /* Garante espaço entre o título e outros itens */
+    align-items: center;
+    justify-content: space-between;
     box-sizing: border-box;
 }
 
 header h1 {
-    margin: 0; /* Remove margens extras no título */
-    font-size: 20px; /* Ajuste opcional do tamanho do título */
-    padding-left: 60px; /* Garante espaçamento entre o botão e o título */
+    margin: 0;
+    font-size: 20px;
+    padding-left: 60px;
 }
 
 /* Botão de menu */
 .menu-toggle {
     position: fixed;
-    left: 20px; /* Ajusta a posição do botão */
-    top: 15px; /* Ajusta a altura para não sobrepor o título */
-    background-color: #4CAF50;
-    color: white;
+    left: 20px;
+    top: 10px;
+    background-color: #255183; /* Azul médio para contraste */
+    color: rgb(163, 152, 218);
     border: none;
     padding: 10px 15px;
     cursor: pointer;
@@ -45,20 +46,20 @@ header h1 {
 /* Layout principal */
 .container {
     display: flex;
-    margin-top: 70px; /* Espaço para compensar o header fixo */
+    margin-top: 70px;
     flex-grow: 1;
 }
 
 /* Menu lateral */
 .sidebar {
     width: 200px;
-    background-color: #f4f4f4;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    background-color: #002b5c; /* Azul escuro para a barra lateral */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     overflow: auto;
     transition: transform 0.3s ease;
     padding-top: 20px;
-    height: 100vh; /* Define a altura fixa como 100% da altura da janela */
-    position: fixed; /* Fixa o menu lateral para não ser afetado pelo conteúdo */
+    height: 100vh;
+    position: fixed;
 }
 
 .sidebar.hidden {
@@ -72,11 +73,12 @@ header h1 {
 
 .sidebar li {
     padding: 15px 10px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #004080;
+    color: rgb(156, 146, 212);
 }
 
 .sidebar li:hover {
-    background-color: #ddd;
+    background-color: #004080; /* Azul mais claro para o hover */
     cursor: pointer;
 }
 
@@ -84,21 +86,31 @@ header h1 {
 .content {
     flex-grow: 1;
     padding: 20px;
-    margin-left: 220px; /* Espaço quando o menu está visível */
-    transition: margin-left 0.3s ease; /* Animação suave ao recolher/expandir o menu */
+    margin-left: 220px;
+    transition: margin-left 0.3s ease;
     box-sizing: border-box;
+    background-color: #001f3f; /* Fundo do conteúdo */
+    color: #a8a6b1;
+}
+/* Estilo para links padrão */
+a {
+    color: #1e90ff; /* Azul claro para links não clicados */
+    text-decoration: none; /* Remove sublinhado */
+    transition: color 0.3s ease; /* Transição suave ao mudar de cor */
 }
 
+/* Estilo para links visitados */
+a:visited {
+    color: #235e9a; /* Azul arroxeado para links clicados */
+}
 
-/* Botão de menu */
-.menu-toggle {
-    position: fixed;
-    left: 10px;
-    top: 10px;
-    background-color: #0d023b;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    z-index: 1000;
+/* Estilo para links ao passar o mouse */
+a:hover {
+    color: #5c4c0d; /* Amarelo para hover */
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Estilo para links ativos (clicados no momento) */
+a:active {
+    color: #ff4500; /* Laranja para links ativos */
 }
