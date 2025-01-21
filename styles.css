@@ -84,8 +84,9 @@ header h1 {
 .content {
     flex-grow: 1;
     padding: 20px;
-    margin-left: 220px; /* Aumenta o espaço entre o menu e o conteúdo */
-    box-sizing: border-box; /* Garante que padding e margin sejam bem calculados */
+    margin-left: 220px; /* Espaço quando o menu está visível */
+    transition: margin-left 0.3s ease; /* Animação suave ao recolher/expandir o menu */
+    box-sizing: border-box;
 }
 
 

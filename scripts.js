@@ -2,9 +2,13 @@ const sidebar = document.querySelector('.sidebar');
 const menuToggle = document.querySelector('.menu-toggle');
 const content = document.getElementById('content');
 
-// Alternar a exibição do menu lateral
 menuToggle.addEventListener('click', () => {
     sidebar.classList.toggle('hidden');
+    if (sidebar.classList.contains('hidden')) {
+        content.style.marginLeft = '20px'; // Reduz o espaço quando o menu está recolhido
+    } else {
+        content.style.marginLeft = '220px'; // Espaço padrão quando o menu está visível
+    }
 });
 
 // Função para carregar uma página HTML no conteúdo principal
