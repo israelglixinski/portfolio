@@ -11,13 +11,35 @@ body {
 header {
     background-color: #0d023b;
     color: white;
-    /* padding: 1px 1px; */
-    text-align: center;
+     padding: 13px 13px;
+    text-align: left; /* Alinha o texto à esquerda */
     position: fixed;
     top: 0;
     width: 100%;
-    font-size: 13px;
-    margin:0;
+    
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o conteúdo do header */
+    justify-content: space-between; /* Garante espaço entre o título e outros itens */
+    box-sizing: border-box;
+}
+
+header h1 {
+    margin: 0; /* Remove margens extras no título */
+    font-size: 20px; /* Ajuste opcional do tamanho do título */
+    padding-left: 60px; /* Garante espaçamento entre o botão e o título */
+}
+
+/* Botão de menu */
+.menu-toggle {
+    position: fixed;
+    left: 20px; /* Ajusta a posição do botão */
+    top: 15px; /* Ajusta a altura para não sobrepor o título */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1000;
 }
 
 /* Layout principal */
@@ -61,10 +83,11 @@ header {
 /* Conteúdo principal */
 .content {
     flex-grow: 1;
-    padding: 0; /* Remove padding para que o PDF ocupe toda a área */
-    margin-left: 200px;
-    height: calc(100vh - 70px); /* Garante que a altura ocupe o espaço abaixo do header */
+    padding: 20px;
+    margin-left: 220px; /* Aumenta o espaço entre o menu e o conteúdo */
+    box-sizing: border-box; /* Garante que padding e margin sejam bem calculados */
 }
+
 
 /* Botão de menu */
 .menu-toggle {
