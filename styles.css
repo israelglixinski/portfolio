@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Azonix';
+    src: url('fonts/Azonix.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
 /* General style for the body element */
 body {
     margin: 0;
@@ -52,6 +61,19 @@ header h1 {
     flex-grow: 1;
 }
 
+h1 {
+    font-family: 'Azonix', sans-serif;
+    color: rgb(179, 179, 227);
+}
+h2 {
+    font-family: 'Azonix', sans-serif;
+    color: rgb(160, 201, 202);
+}
+h3 {
+    font-family: 'Azonix', sans-serif;
+    color: rgb(116, 142, 139);
+}
+
 /* Sidebar (menu) style */
 .sidebar {
     width: 200px;
@@ -62,6 +84,7 @@ header h1 {
     padding-top: 20px;
     height: 100vh; /* Define a altura fixa como 100% da altura da janela */
     position: fixed; /* Fixa o menu lateral para não ser afetado pelo conteúdo */
+    font-family: 'Azonix', sans-serif;
 }
 
 .sidebar.hidden {
