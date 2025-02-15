@@ -8,7 +8,18 @@ This project follows versioning [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 ### Changed
-- adjust code format and comments.
+- Nothing here.
+
+---
+
+## [1.1.1] - 2025-01-15
+### Added
+- Changed the language to Portuguese in many parts.
+- Improved colors.
+- Added a more modern font.
+
+### Fixed
+- Adjusted information for better presentation.
 
 ---
 
