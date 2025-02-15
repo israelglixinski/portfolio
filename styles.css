@@ -6,7 +6,6 @@
 }
 
 
-
 /* General style for the body element */
 body {
     margin: 0;
@@ -14,38 +13,38 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-color: #001f3f; /* Azul escuro para o fundo */
-    color: #db0f0f; /* Branco para o texto */
+    background-color: #001f3f;      /* Dark blue for background */
+    color: #f3e8e8;                 /* White for text */
 }
 
 /* Top header style */
 header {
     background-color: #051327;
     color: rgb(48, 79, 165);
-     padding: 17px 17px;
-    text-align: left; /* Alinha o texto à esquerda */
+    padding: 17px 17px;
+    text-align: left;                   /* Aligns text to the left */
     position: fixed;
     top: 0;
     width: 100%;
     
     display: flex;
-    align-items: center; /* Centraliza verticalmente o conteúdo do header */
-    justify-content: space-between; /* Garante espaço entre o título e outros itens */
+    align-items: center;                /* Vertically centers header content */
+    justify-content: space-between;     /* Ensures space between title and other items */
     box-sizing: border-box;
 }
 
 /* Header title style */
 header h1 {
-    margin: 0; /* Remove margens extras no título */
-    font-size: 20px; /* Ajuste opcional do tamanho do título */
-    padding-left: 60px; /* Garante espaçamento entre o botão e o título */
+    margin: 0;                          /* Removes extra margins in the title */
+    font-size: 20px;                    /* Optional title size adjustment */
+    padding-left: 60px;                 /* Ensures spacing between button and title */
 }
 
 /* Menu toggle button style */
 .menu-toggle {
     position: fixed;
-    left: 20px; /* Ajusta a posição do botão */
-    top: 15px; /* Ajusta a altura para não sobrepor o título */
+    left: 20px;                         /* Adjusts button position */
+    top: 15px;                          /* Adjusts height to not overlap the title */
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -57,7 +56,7 @@ header h1 {
 /* Main layout container */
 .container {
     display: flex;
-    margin-top: 70px; /* Espaço para compensar o header fixo */
+    margin-top: 70px;                   /* Space to compensate for the fixed header */
     flex-grow: 1;
 }
 
@@ -82,19 +81,19 @@ h3 {
     overflow: auto;
     transition: transform 0.3s ease;
     padding-top: 20px;
-    height: 100vh; /* Define a altura fixa como 100% da altura da janela */
-    position: fixed; /* Fixa o menu lateral para não ser afetado pelo conteúdo */
+    height: 100vh;                              /* Sets fixed height to 100% of window height */
+    position: fixed;                            /* Fixes sidebar so it is not affected by content */
     font-family: 'Azonix', sans-serif;
 }
 
 .sidebar.hidden {
-    transform           : translateX(-200px); /* Moves the sidebar off-screen                           */
+    transform           : translateX(-200px);   /* Moves the sidebar off-screen */
 }
 
 /* Sidebar list style */
 .sidebar ul {
-    list-style          : none              ; /* Removes default list bullets                           */
-    padding             : 0                 ; /* Removes default padding                                */
+    list-style          : none              ;   /* Removes default list bullets */
+    padding             : 0                 ;   /* Removes default padding */
 }
 
 /* Sidebar list item style */
@@ -114,15 +113,15 @@ h3 {
 .content {
     flex-grow: 1;
     padding: 20px;
-    margin-left: 220px; /* Espaço quando o menu está visível */
-    transition: margin-left 0.3s ease; /* Animação suave ao recolher/expandir o menu */
+    margin-left: 220px;                         /* Space when menu is visible */
+    transition: margin-left 0.3s ease;          /* Smooth animation when collapsing/expanding menu */
     box-sizing: border-box;
-    background-color: #001f3f; /* Fundo do conteúdo */
+    background-color: #001f3f;                  /* Background for content */
     color: #a8a6b1;
 }
 
 
-/* Botão de menu */
+/* Menu button */
 .menu-toggle {
     position: fixed;
     left: 10px;
@@ -134,25 +133,26 @@ h3 {
     cursor: pointer;
     z-index: 1000;
 }
-/* Estilo para links padrão */
+
+/* Default link style */
 a {
-    color: #1e90ff; /* Azul claro para links não clicados */
-    text-decoration: none; /* Remove sublinhado */
-    transition: color 0.3s ease; /* Transição suave ao mudar de cor */
+    color: #1e90ff;                             /* Light blue for unclicked links */
+    text-decoration: none;                      /* Removes underline */
+    transition: color 0.3s ease;                /* Smooth transition when changing color */
 }
 
-/* Estilo para links visitados */
+/* Style for visited links */
 a:visited {
-    color: #235e9a; /* Azul arroxeado para links clicados */
+    color: #235e9a;                             /* Purplish blue for clicked links */
 }
 
-/* Estilo para links ao passar o mouse */
+/* Style for links when hovered */
 a:hover {
-    color: #5c4c0d; /* Amarelo para hover */
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    color: #5c4c0d;                             /* Gold for hover */
+    text-decoration: underline;                   /* Adds underline on hover */
 }
 
-/* Estilo para links ativos (clicados no momento) */
+/* Style for active (currently clicked) links */
 a:active {
-    color: #ff4500; /* Laranja para links ativos */
+    color: #ff4500;                             /* Orange for active links */
 }
